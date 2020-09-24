@@ -1,0 +1,109 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  font-size: 26px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+  background: hsl(var(--hue-correct), 100%, 20%);
+}
+
+body.wrong {
+  background: hsl(var(--hue-wrong), 100%, 20%);
+}
+
+.header {
+  font-size: 40px;
+  text-align: center;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+#question{
+  height: 380px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  background: hsl(var(--hue), 100%, 50%);
+  border: 3px solid hsl(var(--hue), 100%, 30%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+  outline: none;
+  font-size: 26px;
+}
+
+.btn:hover {
+  border:3px solid #000;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  background: hsl(var(--hue), 100%, 40%);
+  color: #000;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+  background: hsl(var(--hue), 100%, 40%);
+  color: #000;
+}
+
+.start-btn, .next-btn {
+  font-size: 2.5rem;
+  padding: 30px 60px;
+}
+
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+
+svg {
+  display: block;
+  margin: 50px auto;
+}
+
+#loader
+{ fill: #0088cc }
+
+#border
+{ fill: #00517a }

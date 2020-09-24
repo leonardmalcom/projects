@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Quiz App</title>
+</head>
+<body class="">
+  <div class="container">
+    <div id="question-container" class="">
+      <div id="question" class="header">Here is the question</div>
+      <div id="score">Here is the Score <span id="score-display"></span></div>
+      <div id="timer">Timer</div>
+<svg width="250" height="250" viewbox="0 0 250 250">
+  <path id="border" transform="translate(125, 125)"/>
+  <path id="loader" transform="translate(125, 125) scale(.84)"/>
+</svg>
+      <div id="answer-buttons" class="btn-grid">
+        <button id="answer-buttons btn1"  class="answer-buttons btn" value="true">True</button>
+        <button id="answer-buttons btn2" class="answer-buttons btn" value="false">False</button>
+      </div>
+
+      <div id="full-answer"></div>
+    </div>
+
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn hide">Start</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+  </div>
+
+   <script src="js/script.js"></script>
+
+</body>
+</html>

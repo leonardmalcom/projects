@@ -1,0 +1,109 @@
+
+
+<!-- Render content -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Quiz Demo</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <style>
+      body{
+          background: #E8E6E6;
+      }
+      
+  </style>
+</head>
+<body>
+<div id="quiz">
+  <div id="quiz-header">
+    <h1>Basic Quiz Demo</h1>
+    <p><a id="quiz-home-btn">Home</a></p>
+  </div>
+  <div id="quiz-start-screen">
+    <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/quiz.min.js"></script>
+<script>
+  $('#quiz').quiz({
+    //resultsScreen: '#results-screen',
+    //counter: false,
+    //homeButton: '#custom-home',
+    counterFormat: 'Question %current of %total',
+    questions: [
+      {
+        'q': 'Do you like FrontBackEnd.com?',
+        'options': [
+          'Yes I Like',
+          'Of course',
+          'Not Interested',
+          'No I dont Like'
+        ],
+        'correctIndex': 1,
+        'correctResponse': 'Custom correct response.',
+        'incorrectResponse': 'Custom incorrect response.'
+      },
+      {
+        'q': 'A smaple question?',
+        'options': [
+          'Answer 1',
+          'Answer 2'
+        ],
+        'correctIndex': 1,
+        'correctResponse': 'Custom correct response.',
+        'incorrectResponse': 'Custom incorrect response.'
+      },
+      {
+        'q': 'A smaple question?',
+        'options': [
+          'Answer 1',
+          'Answer 2',
+          'Answer 3',
+          'Answer 4'
+        ],
+        'correctIndex': 2,
+        'correctResponse': 'Custom correct response.',
+        'incorrectResponse': 'Custom incorrect response.'
+      },
+      {
+        'q': 'A smaple question?',
+        'options': [
+          'Answer 1',
+          'Answer 2'
+        ],
+        'correctIndex': 1,
+        'correctResponse': 'Custom correct response.',
+        'incorrectResponse': 'Custom incorrect response.'
+      },
+      {
+        'q': 'A smaple question?',
+        'options': [
+          'Answer 1',
+          'Answer 2',
+          'Answer 3',
+          'Answer 4'
+        ],
+        'correctIndex': 3,
+        'correctResponse': 'Custom correct response.',
+        'incorrectResponse': 'Custom incorrect response.'
+      }
+    ]
+  });
+</script>
+    
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144199882-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-144199882-1');
+    </script>
+
+</body>
+</html>
